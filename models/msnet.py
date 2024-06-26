@@ -153,11 +153,6 @@ class ResNet(nn.Module):
                 if m.bias is not None:
                     nn.init.constant_(m.bias, 0)
 
-    # def compute_style(self, x):
-    #     mu = x.mean(dim=[2, 3])
-    #     sig = x.std(dim=[2, 3])
-    #     return torch.cat([mu, sig], 1)
-
     def featuremaps(self, x):
         #---------head-------------
         x = self.conv1(x)
@@ -504,7 +499,7 @@ class Mybackbone(nn.Module):
     def __init__(self, out_dim):
         super(Mybackbone, self).__init__()
         self.share_encoder = resnet50()
-        # # -- 调整输出纬度，统一调整为64
+
         self.c0_d = c0_down(out_c=out_dim)
         self.c1_d = c1_down(out_c=out_dim)
         self.c2_d = c2_down(out_c=out_dim)
@@ -577,9 +572,9 @@ class Mybackbone(nn.Module):
         f2 = self.rf2(f_12345_cat)
 
         features = OrderedDict()
-        features['0'] = f2  #--200
-        features['1'] = f3  #--100
-        features['2'] = f4  #--50
+        features['0'] = f2  
+        features['1'] = f3  
+        features['2'] = f4  
         features['3'] = s_feat_0
         features['4'] = m_feat_0
         features['5'] = l_feat_0
