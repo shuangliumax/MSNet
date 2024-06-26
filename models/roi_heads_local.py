@@ -16,13 +16,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-# def attention_map(fm, eps=1e-6):
-#     am = torch.pow(torch.abs(fm), 10)
-#     am = torch.sum(am, dim=1, keepdim=True)
-#     norm = torch.norm(am, dim=(2, 3), keepdim=True)
-#     am = torch.div(am, norm + eps)
-#     return am
-
 def afd(fm_s, fm_t, eps=1e-6):
     in_channels = 64
     mid_channels = 128
@@ -52,13 +45,6 @@ def afd(fm_s, fm_t, eps=1e-6):
     loss = loss.sum(1).mean(0)
 
     return loss
-
-# def attention_map(fm, eps=1e-6):
-#     am = torch.pow(torch.abs(fm), 4)
-#     am = torch.sum(am, dim=1, keepdim=True)
-#     norm = torch.norm(am, dim=(2, 3), keepdim=True)
-#     am = torch.div(am, norm + eps)
-#     return am
 def fastrcnn_loss(class_logits, box_regression, labels, regression_targets, s_feat_0, m_feat_0, l_feat_0):
     # type: (Tensor, Tensor, List[Tensor], List[Tensor]) -> Tuple[Tensor, Tensor]
     """
