@@ -1,0 +1,37 @@
+# Images and labels direcotry should be relative to train.py
+#TRAIN_DIR_IMAGES: '/home/LPF/external/dataset/SAR_Dataset/BBox_SSDD/coco_style/images/train'
+#TRAIN_DIR_LABELS: '/home/LPF/external/dataset/SAR_Dataset/BBox_SSDD/coco_style/annotations/train.json'
+#VALID_DIR_IMAGES: '/home/LPF/external/dataset/SAR_Dataset/SAR_Ship_Dataset/images'
+#VALID_DIR_LABELS: '/home/LPF/external/dataset/SAR_Dataset/SAR_Ship_Dataset/datest.json'
+
+TRAIN_DIR_IMAGES: '/home/shuangliumax/dataset/SAR_Dataset/BBox_SSDD/coco_style/images/train'
+TRAIN_DIR_LABELS: '/home/shuangliumax/dataset/SAR_Dataset/BBox_SSDD/coco_style/annotations/train.json'
+VALID_DIR_IMAGES: '/home/shuangliumax/dataset/SAR_Dataset/BBox_SSDD/coco_style/images/test'
+VALID_DIR_LABELS: '/home/shuangliumax/dataset/SAR_Dataset/BBox_SSDD/coco_style/annotations/test.json'
+# Class names.
+CLASSES: [
+    '__background__', '0'
+
+]
+
+#COCO_91_CLASSES: [
+#    '__background__',
+#    'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
+#    'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'N/A', 'stop sign',
+#    'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow',
+#    'elephant', 'bear', 'zebra', 'giraffe', 'N/A', 'backpack', 'umbrella', 'N/A', 'N/A',
+#    'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball',
+#    'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket',
+#    'bottle', 'N/A', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl',
+#    'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza',
+#    'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'N/A', 'dining table',
+#    'N/A', 'N/A', 'toilet', 'N/A', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
+#    'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'N/A', 'book',
+#    'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'
+#]
+
+# Number of classes (object classes + 1 for background class in Faster RCNN).
+NC: 2
+
+# Whether to save the predictions of the validation set while training.
+SAVE_VALID_PREDICTION_IMAGES: True

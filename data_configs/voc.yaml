@@ -1,0 +1,19 @@
+# Images and labels direcotry should be relative to train.py
+TRAIN_DIR_IMAGES: '/home/LPF/external/lpf/faster-rcnn.pytorch-pytorch-1.0/dataset/BBox_SSDD/voc_style/JPEGImages_train'
+TRAIN_DIR_LABELS: '/home/LPF/external/lpf/faster-rcnn.pytorch-pytorch-1.0/dataset/BBox_SSDD/voc_style/Annotations_train'
+VALID_DIR_IMAGES: '/home/LPF/external/lpf/faster-rcnn.pytorch-pytorch-1.0/dataset/BBox_SSDD/voc_style/JPEGImages_test'
+VALID_DIR_LABELS: '/home/LPF/external/lpf/faster-rcnn.pytorch-pytorch-1.0/dataset/BBox_SSDD/voc_style/Annotations_test'
+
+# Class names.
+CLASSES: [
+    '__background__',
+    "ship"
+
+
+
+
+# Number of classes (object classes + 1 for background class in Faster RCNN).
+NC: 2
+
+# Whether to save the predictions of the validation set while training.
+SAVE_VALID_PREDICTION_IMAGES: True

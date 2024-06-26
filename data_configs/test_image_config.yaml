@@ -1,0 +1,5 @@
+image_path: /home/LPF/external/lpf/faster-rcnn.pytorch-pytorch-1.0/dataset/BBox_SSDD/voc_style/JPEGImages_test
+NC: 2
+CLASSES: [
+    '__background__', 'ship'
+]
