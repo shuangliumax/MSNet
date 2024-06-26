@@ -481,7 +481,6 @@ class adjustscale(nn.Module):
         # print('l2.shape:', l.shape)
         # l2.shape: torch.Size([4, 64, 200, 200])
 
-        # 尺度不变
         m = self.conv_m(m)
 
 
@@ -539,7 +538,7 @@ class Mybackbone(nn.Module):
         x_m_0, x_m_1, x_m_2, x_m_3, x_m_4 = self.share_encoder(x_m)
         x_l_0, x_l_1, x_l_2, x_l_3, x_l_4 = self.share_encoder(x_l)
 
-        s_feat_0, m_feat_0, l_feat_0 = self.scale_0(x_s_0, x_m_0, x_l_0)
+        s_feat_1, m_feat_1, l_feat_1 = self.scale_0(x_s_1, x_m_1, x_l_1)
 
         x_s_0, x_s_1, x_s_2, x_s_3, x_s_4 = self.c0_d(x_s_0), self.c1_d(x_s_1), self.c2_d(x_s_2), self.c3_d(x_s_3), self.c4_d(x_s_4)
         x_m_0, x_m_1, x_m_2, x_m_3, x_m_4 = self.c0_d(x_m_0), self.c1_d(x_m_1), self.c2_d(x_m_2), self.c3_d(x_m_3), self.c4_d(x_m_4)
@@ -575,9 +574,9 @@ class Mybackbone(nn.Module):
         features['0'] = f2  
         features['1'] = f3  
         features['2'] = f4  
-        features['3'] = s_feat_0
-        features['4'] = m_feat_0
-        features['5'] = l_feat_0
+        features['3'] = s_feat_1
+        features['4'] = m_feat_1
+        features['5'] = l_feat_1
 
         return features
         # return features
