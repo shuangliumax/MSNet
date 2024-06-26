@@ -1,37 +1,7 @@
-# A Simple Pipeline to Train PyTorch FasterRCNN Model
-
-
-
-Train PyTorch FasterRCNN models easily on any custom dataset. Choose between official PyTorch models trained on COCO dataset, or choose any backbone from Torchvision classification models, or even write your own custom backbones. 
-
-***You can run a Faster RCNN model with Mini Darknet backbone and Mini Detection Head at more than 150 FPS on an RTX 3080***.
-
-![](readme_images/gif_1.gif)
- 
-## Get Started
-
-​																								[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1oFxPpBeE8SzSQq7BTUv28IIqQeiHHLdj?usp=sharing) [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/code/sovitrath/custom-faster-rcnn-training-kaggle/notebook)
-
-* [Find blog posts/tutorials on DebuggerCafe](#Tutorials)
-
-## [Check Updates Here](https://github.com/sovit-123/fasterrcnn-pytorch-training-pipeline/blob/main/docs/updates.md)
-
-## Custom Model Naming Conventions
+# A Mixed-Scale Self-Distillation Network for Accurate Ship Detection in SAR Images
+This repository contains the code for the paper "[A Mixed-Scale Self-Distillation Network for Accurate Ship Detection in SAR Images](https://ieeexplore.ieee.org/abstract/document/10285007)".
 
 ***For this repository:***
-
-* **Small head refers to 512 representation size in the Faster RCNN head and predictor.**
-* **Tiny head refers to 256 representation size in the Faster RCNN head and predictor.**
-* **Nano head refers to 128 representation size in the Faster RCNN head and predictor.**
-
-## [Check All Available Model Flags](#A-List-of-All-Model-Flags-to-Use-With-the-Training-Script)
-
-## Go To
-
-* [Setup on Ubuntu](#Setup-for-Ubuntu)
-* [Setup on Windows](#Setup-on-Windows)
-* [Train on Custom Dataset](#Train-on-Custom-Dataset)
-* [Inference](#Inference)
 
 ## Setup on Ubuntu
 
